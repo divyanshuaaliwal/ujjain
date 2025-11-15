@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Crawl-delay: 5
+
+# Block duplicate/irrelevant parameters 
+Disallow: /*?replytocom
+Disallow: /*?utm_*
+Disallow: /*?sessionid=*
+
+# Important: Always include sitemap for fast indexing
+Sitemap: https://ujjainmahakal.com/sitemap.xml

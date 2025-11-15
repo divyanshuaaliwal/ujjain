@@ -1,0 +1,299 @@
+.wrapperContainer {
+    background: var(--gradient-bg);
+    padding: 2rem;  
+}
+
+.formContainer {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.form {
+    padding: 0 1rem 1rem;
+}
+
+
+.goHomeButton {
+    margin-top: 16px;
+   display: block;
+    width: 150px;
+    text-align: center;
+    background: linear-gradient(to right, #f17525, #e46e0f);
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.goHomeButton:hover {
+    background: linear-gradient(to right, #d45e00, #e0670b);
+    transform: translateY(-2px);
+}
+
+.successMessage h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;  
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.successMessage h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color:
+        #f45d48;
+    border-radius: 1px;
+}
+
+
+
+.inputGroup {
+    margin-bottom: 1.2rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color:
+        #fafafa;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color:
+        #f45d48;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(244, 93, 72, 0.1);
+}
+
+.inputGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.errorInput {
+    border-color:
+        #e03131 !important;
+    background-color:
+        #fff5f5 !important;
+}
+
+.error {
+    color:
+        #e03131;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.error::before {
+    content: "⚠️";
+    margin-right: 0.3rem;
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary-orange);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.submitButton:hover {
+    background-color: var(--color-hover-orange);
+}
+
+.submitButton:disabled {
+    background-color:
+        #f8a399;
+    cursor: not-allowed;
+}
+
+
+/* Success Message Styles */
+.successMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.successMessage h2 {
+    color:
+        #28a745;
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.successMessage p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Checkmark Animation */
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke:
+        #28a745;
+    stroke-miterlimit: 10;
+    box-shadow: 0 0 0 #28a745;
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmarkCircle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke:
+        #28a745;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmarkCheck {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #fff;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    
+    .wrapperContainer {
+        padding: 2rem 2rem 3rem;
+    }
+
+    .formContainer {
+        border-radius: 24px;
+        padding: 1rem   ;
+    }
+
+    .form {
+        padding: 0 1.2rem 1.5rem;
+    }
+
+
+
+    .successMessage h2 {
+        font-size: 1.5rem;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup textarea {
+        padding: 0.75rem;
+    }
+
+    .submitButton {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    
+    .wrapperContainer {
+        padding: 1.5rem 1rem 2rem ;
+    }
+
+    .formContainer {
+        border-radius: 16px;
+        padding:1rem;
+    }
+
+
+    .form {
+        padding: 0 0.5rem 1rem;
+    }
+
+    .section {
+        margin-bottom: 1.1rem;
+    }
+
+    .successMessage h2 {
+        font-size: 1.2rem;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup textarea {
+        padding: 0.75rem;
+    }
+
+    .submitButton {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}

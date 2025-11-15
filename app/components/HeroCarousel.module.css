@@ -1,0 +1,145 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.videoWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.videoElement {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    min-height: 300px; /* reserves vertical space */
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    min-height: 3.5rem; /* prevents title shift */
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 3rem; /* prevents desc shift */
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navButton,
+.muteButton {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.navButton:hover,
+.muteButton:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+/* Booking Button */
+.bookingButton {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.bookingButton:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.07);
+    border-color: white;
+}
+
+.videoFallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+@media (max-width: 550px) {
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .bookingButton {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .navButton,
+    .muteButton {
+        padding: 2px 0.75rem;
+        font-size: 1rem;
+        border-radius: 3px;
+    }
+
+    .controls {
+        bottom: 10px;
+    }
+}

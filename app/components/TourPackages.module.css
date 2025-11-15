@@ -1,0 +1,129 @@
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.packageImage {
+    object-fit: cover;
+     transition: transform 0.4s ease-in-out;
+}
+
+.card:hover .packageImage {
+    transform: scale(1.05);
+}
+
+.cardBody {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardContent {
+    flex-grow: 1;
+}
+
+.cardBody h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.detail {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.price {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.price strong {
+    color: #e53e3e;
+    font-size: 1.2rem;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.perPerson {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 1250px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 950px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+
+    .cardContainer {
+       grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 100vw;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+}

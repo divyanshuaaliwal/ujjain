@@ -1,0 +1,371 @@
+.videoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+
+.container {
+    background:transparent;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.details {
+  background:  rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+}
+
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-primary-orange);
+    padding-bottom: 10px;
+}
+
+.parkInfo {
+    margin-bottom: 20px;
+}
+
+.activeButton {
+    background-color: var(--color-primary-orange);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftContainer .pricing:nth-child(1) {
+    width:30%;
+}
+
+.leftContainer .pricing:nth-child(2) {
+  width:65%;
+}
+
+.pricing {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.pricing h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.pricing p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.calendarAndForm {
+    width: 500px;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 490px;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+.optionsColour {
+    color: black;
+}
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.calendar,
+.formContainer {
+    background:  rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding:20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+    overflow-y: auto;
+}
+
+.calendar {
+    transform: rotateY(0deg);
+}
+
+.formContainer {
+    transform: rotateY(180deg);
+}
+
+.calendar h2,
+.formTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.monthNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.monthNavigation button {
+    background: none;
+    border: none;
+    color: var(--color-primary-orange);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.monthNavigation button:disabled {
+    color: #666;
+    cursor: not-allowed;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.prev {
+    transform: rotateY(-90deg);
+}
+
+.next {
+    transform: rotateY(90deg);
+}
+
+.day,
+.empty {
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.day {
+    cursor: pointer;
+}
+
+.day:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.disabled {
+    background: rgba(255, 255, 255, 0.05);
+    color: #666;
+    cursor: not-allowed;
+}
+
+.empty {
+    background: none;
+}
+
+.selected {
+    background: var(--color-primary-orange);
+    color: #ffffff;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.formGroup input,
+.formGroup select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.formGroup input[readOnly] {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.backButton,
+.submitButton {
+    background-color: var(--color-primary-orange);
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+.backButton {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1175px) {
+
+    .details,
+    .calendarAndForm {
+        width: 100%;
+        max-width: 500px;
+    }
+
+      .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .leftContainer {
+        flex-direction: column;
+    }
+
+    
+    .leftContainer .pricing:nth-child(1),
+    .leftContainer .pricing:nth-child(2) {
+    width:100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+  
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .details,
+    .calendar,
+    .formContainer {
+        padding: 15px;
+    }
+
+
+    .title,
+    .calendar h2,
+    .formTitle {
+        font-size: 1.5rem;
+    }
+
+
+
+    .days {
+        gap: 5px;
+    }
+
+    .day,
+    .empty {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .activeButton {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .description,
+    .pricing p,
+    .formGroup label,
+    .formGroup input,
+    .formGroup select {
+        font-size: 0.9rem;
+    }
+
+    .day,
+    .empty {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .backButton,
+    .submitButton {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+
+    
+
+
+}

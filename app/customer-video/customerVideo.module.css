@@ -1,0 +1,56 @@
+.customerVideosSection {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.videoGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* This ensures container has height, but adapts to video size */
+.videoWrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #000;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Portrait videos handled better on small screens */
+@media (max-width: 768px) {
+
+    .videoGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+  .video {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 550px) {
+  .customerVideosSection {
+    padding: 1rem;
+  }
+
+  .videoGrid {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+}

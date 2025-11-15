@@ -1,0 +1,299 @@
+
+.heroGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: stretch;
+	padding: 1rem;
+}
+
+.heroImageWrapper {
+	position: relative;
+	height: 400px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heroImage {
+	transition: transform 0.5s ease;
+}
+
+.heroImage:hover {
+	transform: scale(1.05);
+}
+
+.overviewCard {
+	padding: 1rem 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cardTitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #1e293b;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #f97316;
+	padding-bottom: 0.5rem;
+}
+
+
+.overviewDetails {
+	flex-grow: 1;
+}
+
+.overviewDetails p {
+	margin: 0.5rem 0;
+	color: #4b5563;
+	line-height: 1.6;
+}
+
+.overviewText {
+	margin-top: 1rem;
+	color: #4b5563;
+	line-height: 1.6;
+}
+
+.priceInfo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.currentPrice {
+	font-weight: 700;
+	color: #ff5722;
+	font-size: 28px;
+	margin-right: 5px;
+}
+
+.innerData {
+    display: flex;
+    gap: 20px;
+}
+.originalPrice {
+	text-decoration: line-through;
+	color: #6b7280;
+	margin-right: 5px;
+}
+
+.saving {
+	color: #16a34a;
+	font-weight: 600;
+}
+
+.ratingParent {
+	display: flex;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.ratingLabel {
+	font-weight: 900;
+	color: #4b5563;
+}
+
+.ratingValue {
+	font-size: 14px;
+	color: #666;
+}
+
+.bookNowButtonHero {
+	background-color: #f97316;
+	color: white;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	align-self: flex-start;
+		margin: 0.5rem 0 0 0;
+		text-decoration: none;
+}
+
+.bookNowButtonHero:hover {
+	background-color: #ea580c;
+	transform: translateY(-2px);
+}
+
+.section {
+	background: white;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease;
+
+	height: auto;
+	max-height: 255px;
+	overflow-y: auto;
+}
+
+.section2 {
+	background: white;
+	padding: 2rem;
+	border-radius: 12px;
+	/* margin-bottom: 2rem; */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease;
+
+	height: auto;
+	max-height: 315px;
+	overflow-y: auto;
+}
+
+.section:hover,
+.section2:hover {
+	transform: translateY(-4px);
+}
+
+.sectionTitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #1e293b;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #f97316;
+	padding-bottom: 0.5rem;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+}
+
+.listItem {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid #e5e7eb;
+	color: #4b5563;
+	line-height: 1.6;
+}
+
+.listItem:last-child {
+	border-bottom: none;
+}
+
+.tabContainer {
+	display: flex;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tabButton {
+	padding: 0.75rem 1.5rem;
+	border: 2px solid #f97316;
+	background-color: white;
+	color: #f97316;
+	cursor: pointer;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+/* 
+.tabButton:hover {
+	background-color: #f97316;
+	color: white;
+} */
+
+.active {
+	background-color: #f97316;
+	color: white;
+}
+
+.bookNowButton {
+	display: block;
+	padding: 1rem 2rem;
+	background-color: #f97316;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bookNowButton:hover {
+	background-color: #ea580c;
+	transform: translateY(-2px);
+}
+.finalItem {
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.notFound {
+	text-align: center;
+	padding: 4rem 0;
+	font-size: 1.75rem;
+	color: var(--color-primary-orange);
+	font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+
+	.heroGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.heroImageWrapper {
+		height: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.heroGrid {
+		padding: 1.5rem;
+	}
+
+	.finalItem {
+		grid-column: span 1;
+	}
+
+	.heroImageWrapper {
+		height: 250px;
+	}
+}
+
+@media (max-width: 550px) {
+
+	.heroGrid {
+		padding: 0;
+		margin: 0 0;
+	}
+
+
+	.finalItem {
+		grid-column: span 1;
+	}
+
+
+	.heroImageWrapper {
+		height: 200px;
+	}
+
+	.tabButton {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	.bookNowButton {
+		padding: 0.75rem 1.5rem;
+	}
+
+	.overviewCard {
+		padding: 1.5rem;
+	}
+}

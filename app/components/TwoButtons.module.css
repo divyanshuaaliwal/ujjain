@@ -1,0 +1,68 @@
+.whatsAppButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: #1daa29;
+}
+
+.whatsAppButton:hover {
+    background-color: #158a21;
+}
+
+.actionButtons {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+     gap: 12px;
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+    .actionButtons {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    .actionButtons {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+
+.bookButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #f17525, #e46e0f);
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bookButton:hover {
+   background: linear-gradient(to right, #d45e00, #e0670b);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 550px) {
+    /* .actionButtons {
+        flex-direction: column;
+    } */
+}

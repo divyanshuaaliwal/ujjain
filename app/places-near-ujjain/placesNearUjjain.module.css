@@ -1,0 +1,87 @@
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px ;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+  margin-right: 10px;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.cardContent {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.details {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+.destinations {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+@media (max-width: 1250px) {
+    .cardGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+ 
+    .cardGrid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 100vw; /* Increase card width */
+    }
+
+
+    .imageWrapper {
+        height: 200px;
+    }
+}

@@ -1,0 +1,31 @@
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.starIcon {
+  transition: color 0.3s ease;
+}
+
+.ratingDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingValue {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.reviewCount {
+  font-size: 0.9rem;
+  color: #666;
+}

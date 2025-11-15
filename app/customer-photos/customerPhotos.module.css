@@ -1,0 +1,36 @@
+.customerPhotosSection {
+  padding: 2rem 1rem;
+}
+
+.photoGrid {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.photoWrapper {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Responsive columns */
+@media (max-width: 1024px) {
+  .photoGrid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .photoGrid {
+    column-count: 1;
+  }
+}
